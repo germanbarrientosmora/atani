@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>        
+        <record id="listado_Modelo" model="ir.ui.view">
+            <field name="name">listado.Modelo.view</field>
+            <field name="model">product.modelo</field>           
+            <field name="arch" type="xml"> 
+                  <tree>
+                    <field name="name"/>
+                  </tree>
+            </field>
+        </record>
+                
+        <record id="listado_Modelo_action_window" model="ir.actions.act_window">
+            <field name="name">listado.Modelo.action.window</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.modelo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="listado_Modelo"></field>
+        </record>
+
+<!--    solo en caso de que vaya en icono en la pagina princial
+
+             <menuitem
+			id="Listado_Marca_modelo"
+			name="Training Module"
+			sequence="50"
+			/> -->
+        
+        <menuitem
+            id="listado_Modelo_menuitem"
+            name="Modelo"
+            action="listado_Modelo_action_window"   
+            parent="stock.menu_stock_config_settings"         
+            sequence="102"
+
+        />
+        
+        
+    </data>
+</odoo>
+
+
+
+      
+                
+ 

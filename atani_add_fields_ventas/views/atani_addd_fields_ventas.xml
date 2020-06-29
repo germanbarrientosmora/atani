@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model='ir.ui.view' id='add_fields_inventario'>
+			<field name='name'>add_fields_ventas_general</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+		    <field name="arch" type="xml">		    	
+	            <xpath expr="//field[@name='partner_id']" position="after">
+					<field name="x_concepto" string="Concepto"/>
+     	            
+					<field name="seleccion" string="Mostrar Modelo y Marca"
+						/>							
+					
+	            </xpath>
+		    </field>
+		</record>
+
+	</data>
+</odoo>

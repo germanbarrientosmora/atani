@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="facturacion_apuntescon" model="ir.ui.view">
+            <field name="name">facturacion.apuntescon.view</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position='after'>
+                   <field name="x_conceptox" string="Concepto"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+  

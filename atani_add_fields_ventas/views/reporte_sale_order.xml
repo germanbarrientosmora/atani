@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_sale_vistas" inherit_id="sale.report_saleorder_document">     
+            <xpath expr="//div[@id='informations']" position="before">
+                <br></br>
+                <strong>Concepto:</strong>
+                <span class="m-0" t-field="doc.x_concepto"/>           
+            </xpath>       
+    </template>
+</odoo>

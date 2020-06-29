@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="stock_inventario_form_view" model="ir.ui.view">
+            <field name="name">stock.inventario.form.view</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page//tree//field[@name='product_id']" position="after">
+                    <field name="x_xmodelo"/>
+                    <field name="x_xmarca"></field>         
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+

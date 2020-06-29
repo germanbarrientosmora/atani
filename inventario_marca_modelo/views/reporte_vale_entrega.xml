@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_vale_entrega_stock_u" inherit_id="stock.report_delivery_document"> 
+        <xpath expr="//table[@class='table table-sm mt48']//th" position="before">
+              
+            <th >Modelo</th>
+            <th >Marca</th>          
+        </xpath> 
+         <xpath expr="//table[@class='table table-sm mt48']//tbody//td" position="before">
+            <td>
+                <span t-field="move.x_xmodelo"/>
+            </td>
+            <td>
+                <span t-field="move.x_xmarca"/>
+            </td>
+        </xpath> 
+        
+        <xpath expr="//th[@name='lot_serial']" position="before">
+              
+            <th >Modelo</th>
+            <th >Marca</th>          
+        </xpath> 
+        <xpath expr="//tr[@t-foreach='o.move_line_ids']//td" position="after">
+
+             <td>
+                <span t-field="move_line.x_xmodelo"/>
+            </td>
+            <td>
+                <span t-field="move_line.x_xmarca"/>
+            </td>
+
+        </xpath> 
+        
+    </template>
+</odoo>

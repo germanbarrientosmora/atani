@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_compras_pedido" inherit_id="purchase.report_purchaseorder_document"> 
+        
+        
+        <xpath expr="//table[@class='table table-sm o_main_table']//tr//th" position="before">
+            <th >Modelo</th> <!-- meto una condicional if para checar que si esta seleccionado el campo para saber si requiere ser impreso el modelo y marca  -->
+            <th >Marca</th>         
+        </xpath> 
+            <!--se agrego esta parte para combinar las celdas para subtotal -->
+        <!--    <xpath expr="//table[@class='table table-sm o_main_table']//t[@t-set='colspan']" position="replace"> no quiso tomar estas lineas-->
+        
+        <xpath expr="//table[@class='table table-sm o_main_table']//td" position="before">
+
+            <td ><span t-field="line.x_xmodelo"/></td>
+            <td ><span t-field="line.x_xmarca"/></td>
+        </xpath>
+
+    </template>
+</odoo>
+

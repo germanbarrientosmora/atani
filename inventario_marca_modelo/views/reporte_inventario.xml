@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_invetario" inherit_id="stock.report_picking"> 
+        
+        
+            <xpath expr="//table[@t-if='o.move_line_ids']//tr//th" position="before">
+                
+                <th >Modelo</th>
+                <th >Marca</th>     
+            </xpath> 
+            <xpath expr="//table[@t-if='o.move_line_ids']//tbody//tr//td" position="before">
+
+                <td>
+                    <span t-field="move.x_xmodelo"/><br/>
+                </td>
+                <td>
+                    <span t-field="move.x_xmarca"/><br/>
+                </td>
+
+            </xpath>          
+        
+    </template>
+</odoo>

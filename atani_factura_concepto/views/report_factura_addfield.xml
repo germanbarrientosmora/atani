@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_marcamodelo" inherit_id="account.report_invoice_document"> 
+            <xpath expr="//div[@name='reference']" position="after"> <!--before antes de o afeter despues de   -->
+                <div name="Concepto" class="col-auto mw-100 mb-2" t-if="o.x_conceptox">
+                    <strong>Concepto:</strong>
+                    <p class="m-0" t-field="o.x_conceptox"/>
+                </div>   
+            </xpath> 
+    </template>
+</odoo>
+<!---
+t t-if="not line.display_type
+span[@t-field='line.name'  -->
